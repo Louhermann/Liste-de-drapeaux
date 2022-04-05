@@ -1,0 +1,45 @@
+$font-1: "font-1", sans-serif;
+
+$color-1: #61dafb;
+$color-2: salmon;
+$color-3: #282c34;
+$white: rgb(243, 243, 243);
+
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $white;
+  font-family: $font-1;
+  // @include verticalCenter;
+}
+li {
+  list-style-type: none;
+}
+
+.logo {
+  @include verticalCenter;
+  margin: 5px auto;
+  width: 200px;
+  border-radius: 20px;
+  padding: 5px 0;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.307);
+  background: url(../../public/assets/img/main.jpg) center/cover;
+
+  img {
+    height: 40px;
+  }
+  h3 {
+    margin-left: 10px;
+    color: $color-1;
+  }
+}
